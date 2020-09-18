@@ -1,6 +1,6 @@
 module.exports = {
-  title: '个人主页',
-  description: 'Personal Website',
+  title: 'zhaoshier Blog',
+  description: '业精于勤荒于嬉，行成于思毁于随',
   head: [ // 注入到当前页面的 HTML <head> 中的标签
     ['link', { rel: 'icon', href: '/images/photo.jpg' }],
     ['link', { rel: 'manifest', href: '/images/photo.jpg' }],

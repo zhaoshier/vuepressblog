@@ -7,8 +7,8 @@ sidebarDepth: 2
 # 手把手教你使用 VuePress 搭建个人博客
 
 ::: tip 提示
-有阅读障碍的同学，可以跳过第一至四节，下载我写好的[工具包](https://github.com/zhangyunchencc/vuepress-devkit.git): 
-`git clone https://github.com/zhangyunchencc/vuepress-devkit.git` 然后从第五节开始看。
+有阅读障碍的同学，可以跳过第一至四节，下载我写好的[工具包](https://github.com/zhaoshier/vuepressblog.git): 
+`git clone https://github.com/zhaoshier/vuepressblog.git` 然后从第五节开始看。
 :::
 
 ## 一、为什么你需要一个博客？
@@ -241,7 +241,7 @@ public 文件夹下新建 manifest.json 文件，添加
 
 这个项目是用来开发博客的，以后只需要改这个项目就够了。
 
-- 使用工具包的，将 [vuepress-devkit](https://github.com/zhangyunchencc/vuepress-devkit.git) 中的内容拷贝到 vuepressBlog 文件夹中
+- 使用工具包的，将 [vuepress-devkit](https://github.com/zhaoshier/vuepressblog.git) 中的内容拷贝到 vuepressBlog 文件夹中
 
 - 自己从头搭建的，将 vuepressBlogDemo 文件夹的内容拷贝到仓库二，并在根目录下创建 deploy.sh 文件，内容如下：
 
@@ -382,7 +382,7 @@ cd -
 - Github 需要添加 ssh key，第一次使用的同学遇到问题可以百度解决；
 - 个人博客不只可以用来写技术相关的内容，也可以有自己写的文章、随笔，甚至上传一些照片。
 
-我的 [vuepress-devkit](https://github.com/zhangyunchencc/vuepress-devkit.git) 已经开源放在了 Github 上，还有很多想要增加的功能，例如添加评论模块、自动生成侧边栏目录、增加网站分析工具等等，在这里欢迎大家 Star 或者 Fork 。
+我的 [vuepress-devkit](https://github.com/zhaoshier/vuepressblog.git) 已经开源放在了 Github 上，还有很多想要增加的功能，例如添加评论模块、自动生成侧边栏目录、增加网站分析工具等等，在这里欢迎大家 Star 或者 Fork 。
 
 以上，
 
