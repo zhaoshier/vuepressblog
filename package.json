@@ -1,7 +1,7 @@
 {
   "name": "vuepressblog",
   "version": "1.0.0",
-  "author": "reco_luan",
+  "author": "zhaoshier",
   "scripts": {
     "dev": "vuepress dev . --open --host \"localhost\"",
     "build": "vuepress build .",
