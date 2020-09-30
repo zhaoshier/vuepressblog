@@ -1,13 +1,13 @@
 module.exports = {
-  "title": "vuepressblog",
+  "title": "zhaoshier Blog",  //博客标题
   "description": "blog",
-  "dest": "public",
+  "dest": "public",  //博客部署时的输出文件夹
   "head": [
     [
       "link",
       {
         "rel": "icon",
-        "href": "/favicon.ico"
+        "href": "/earth.png"
       }
     ],
     [
@@ -18,9 +18,9 @@ module.exports = {
       }
     ]
   ],
-  "theme": "reco",
+  "theme": "reco",    //vuepress挂载的主题
   "themeConfig": {
-    "nav": [
+    "nav": [          //导航标题
       {
         "text": "Home",
         "link": "/",
@@ -34,7 +34,7 @@ module.exports = {
       {
         "text": "Docs",
         "icon": "reco-message",
-        "items": [
+        "items": [               //导航子标题
           {
             "text": "vuepress-reco",
             "link": "/docs/theme-reco/"
@@ -47,12 +47,13 @@ module.exports = {
         "items": [
           {
             "text": "GitHub",
-            "link": "https://github.com/recoluan",
+            "link": "https://github.com/zhaoshier",
             "icon": "reco-github"
           }
         ]
       }
     ],
+    //侧边栏设置
     "sidebar": {
       "/docs/theme-reco/": [
         "",
@@ -64,7 +65,7 @@ module.exports = {
     "type": "blog",
     "blogConfig": {
       "category": {
-        "location": 2,
+        "location": 2,     //在导航栏菜单中所占的位置，默认是2
         "text": "Category"
       },
       "tag": {
@@ -72,27 +73,36 @@ module.exports = {
         "text": "Tag"
       }
     },
+    //友情链接
     "friendLink": [
       {
-        "title": "午后南杂",
-        "desc": "Enjoy when you can, and endure when you must.",
-        "email": "1156743527@qq.com",
-        "link": "https://www.recoluan.com"
+        "title": "王叨叨",
+        "desc": "无叨叨，不博客！不懂用户体验的前端不是好爸爸……",
+        "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
+        "link": "https://wangdaodao.com/"
       },
       {
-        "title": "vuepress-theme-reco",
+        "title": "王金山",
+        "desc": "Enjoy when you can, and endure when you must.",
+        "email": "1156743527@qq.com",
+        "link": "https://www.wangjinshan.top/"
+      },
+      {
+        "title": "林梧桐",
         "desc": "A simple and beautiful vuepress Blog & Doc theme.",
         "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-        "link": "https://vuepress-theme-reco.recoluan.com"
+        "link": "www.lynnwutong.top"
       }
     ],
-    "logo": "/logo.png",
+    //博客自定义logo
+    "logo": "/earth.png",
+    //搜索设置
     "search": true,
     "searchMaxSuggestions": 10,
     "lastUpdated": "Last Updated",
     "author": "zhaoshier",
-    "authorAvatar": "/avatar.png",
-    "record": "xxxx",
+    "authorAvatar": "/weixin.jpg",
+    "record": "大脑一片空白的ITer",
     "startYear": "2017"
   },
   "markdown": {

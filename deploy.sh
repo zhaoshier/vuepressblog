@@ -9,7 +9,7 @@ npm run build
 npm run deploy
 # 进入生成的文件夹
 # cd docs/.vuepress/dist
-cd dist
+cd public
 
 # 如果是发布到自定义域名
 # echo 'zhaoshier.top' > CNAME

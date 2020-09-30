@@ -1,7 +1,7 @@
 ---
 home: true
-heroText: vuepress-theme-reco
-tagline: A simple and beautiful vuepress blog theme.
+heroText: zhaoshier Blog
+tagline: --努力奋进的赵十二--
 # heroImage: /hero.png
 # heroImageStyle: {
 #   maxWidth: '600px',
