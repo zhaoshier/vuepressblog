@@ -1,16 +1,18 @@
 ---
 home: true
 heroText: zhaoshier Blog
-tagline: --努力奋进的赵十二--
-# heroImage: /hero.png
+tagline: 努力奋进的赵十二
+
+# heroImage: /bg.gif
 # heroImageStyle: {
-#   maxWidth: '600px',
+#   # maxWidth: '600px',
 #   width: '100%',
 #   display: block,
 #   margin: '9rem auto 2rem',
-#   background: '#fff',
-#   borderRadius: '1rem',
+#   # background: '#fff',
+#   # borderRadius: '1rem',
 # }
+bgImage: /bg.gif
 bgImageStyle: {
   height: '450px'
 }

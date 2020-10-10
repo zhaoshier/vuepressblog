@@ -91,7 +91,13 @@ module.exports = {
         "title": "林梧桐",
         "desc": "A simple and beautiful vuepress Blog & Doc theme.",
         "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
-        "link": "www.lynnwutong.top"
+        "link": "https://www.lynnwutong.top"
+      },
+      {
+        "title": "Sweny",
+        "desc": "A simple and beautiful vuepress Blog & Doc theme.",
+        "avatar": "https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png",
+        "link": "https://swenyy.github.io/"
       }
     ],
     //博客自定义logo
