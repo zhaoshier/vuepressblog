@@ -2,6 +2,9 @@
 home: true
 heroText: zhaoshier Blog
 tagline: 努力奋进的赵十二
+heroTextStyle: {
+  color: 'white',
+}
 
 # heroImage: /bg.gif
 # heroImageStyle: {
@@ -12,9 +15,9 @@ tagline: 努力奋进的赵十二
 #   # background: '#fff',
 #   # borderRadius: '1rem',
 # }
-bgImage: /bg.gif
+bgImage: /1.gif
 bgImageStyle: {
-  height: '450px'
+  height: 500px'
 }
 isShowTitleInHome: false
 actionText: Guide

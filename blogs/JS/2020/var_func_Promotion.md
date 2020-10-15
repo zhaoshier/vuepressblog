@@ -5,6 +5,8 @@ tags:
  - Javascript
 categories:
  -  Javscript
+keys:
+ - 'e10adc3949ba59abbe56e057f20f883e'
 ---
 先思考下面两段代码分别输出什么？
 ```js
