@@ -155,9 +155,9 @@ module.exports = {
     //   }
     // ],
 
-    [
-      //文章形成侧边栏
-      'autobar'],
+    // [
+    //   //文章形成侧边栏
+    //   'autobar'],
     [
       //vuepress复制粘贴提示插件 先安装在配置 npm install vuepress-plugin-nuggets-style-copy --D
       "vuepress-plugin-nuggets-style-copy", {
