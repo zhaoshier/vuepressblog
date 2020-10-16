@@ -16,7 +16,18 @@ module.exports = {
         "name": "viewport",
         "content": "width=device-width,initial-scale=1,user-scalable=no"
       }
-    ]
+    ],
+    ["script", {
+      "language": "javascript",
+      "type": "text/javascript",
+      "src": "https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"
+    }],
+    // 引入鼠标点击脚本
+    ["script", {
+      "language": "javascript",
+      "type": "text/javascript",
+      "src": "/js/clickWord.js"
+    }]
   ],
   "theme": "reco",    //vuepress挂载的主题
   "themeConfig": {
@@ -99,6 +110,12 @@ module.exports = {
         "desc": "A simple and beautiful vuepress Blog & Doc theme.",
         "avatar": "https://www.sunwenyue.top/sweny.jpg",
         "link": "https://swenyy.github.io/"
+      },
+      {
+        "title": "小弋的生活馆",
+        "desc": "A simple and beautiful vuepress Blog & Doc theme.",
+        "avatar": "https://www.sunwenyue.top/sweny.jpg",
+        "link": "https://lovelijunyi.gitee.io/"
       }
     ],
     //博客自定义logo
@@ -128,17 +145,21 @@ module.exports = {
     "lineNumbers": true
   },
   "plugins": [
+    // [
+    //   //鼠标点击特效 先安装在配置， npm install vuepress-plugin-cursor-effects --save
+    //   "cursor-effects",
+    //   {
+    //     size: 3,                    // size of the particle, default: 2
+    //     shape: ['star'],            // shape of the particle, default: 'star'
+    //     zIndex: 999999999           // z-index property of the canvas, default: 999999999
+    //   }
+    // ],
+
     [
-      //鼠标点击特效 先安装在配置， npm install vuepress-plugin-cursor-effects --save
-      "cursor-effects",
-      {
-        size: 3,                    // size of the particle, default: 2
-        shape: ['star'],            // shape of the particle, default: 'star'
-        zIndex: 999999999           // z-index property of the canvas, default: 999999999
-      }
-    ],
+      //文章形成侧边栏
+      'autobar'],
     [
-      //vuepress复制粘贴提示插件P 先安装在配置 npm install vuepress-plugin-nuggets-style-copy --save
+      //vuepress复制粘贴提示插件 先安装在配置 npm install vuepress-plugin-nuggets-style-copy --D
       "vuepress-plugin-nuggets-style-copy", {
         copyText: "复制代码",
         tip: {
@@ -155,36 +176,56 @@ module.exports = {
       //pwa插件
       '@vuepress/pwa', {
         serviceWorker: true,
-        updatePopup: true
+        updatePopup: {
+          message: "发现新内容可用",
+          buttonText: "刷新"
+        }
       }],
-    [
-      //音乐播放
-      '@vuepress-reco/vuepress-plugin-bgm-player', {
-        audios: [
-          // 本地文件示例
-          {
-            name: '장가갈 수 있을까',
-            artist: '咖啡少年',
-            url: '/bgm/1.mp3',
-            cover: '/bgm/1.jpg'
-          },
-          // 网络文件示例
-          {
-            name: '강남역 4번 출구',
-            artist: 'Plastic / Fallin` Dild',
-            url: 'https://assets.smallsunnyfox.com/music/2.mp3',
-            cover: 'https://assets.smallsunnyfox.com/music/2.jpg'
-          },
-          {
-            name: '用胳膊当枕头',
-            artist: '최낙타',
-            url: 'https://assets.smallsunnyfox.com/music/3.mp3',
-            cover: 'https://assets.smallsunnyfox.com/music/3.jpg'
-          }
-        ],
+      // 动态标题
+    ["dynamic-title",
+    {
+      showIcon: "vuepress/smile.ico",
+      showText: "(^︶^)赵十二 Blog！",
+      hideIcon: "vuepress/cry.ico",
+      hideText: "(●—●)呜呜，不要走嘛！！",
+      recoverTime: 2000
+    }],
 
+      // 音乐插件
+    ['meting', {
+      //metingApi: "https://meting.sigure.xyz/api/music",
+      meting: {
+        // 网易
+        server: "netease",
+        // 读取歌单
+        type: "playlist",
+        mid: "5172410111",
+      },          
+      // 不配置该项的话不会出现全局播放器
+      aplayer: {
+        // 吸底模式
+        fixed: true,
+        mini: true,
+        // 自动播放
+        autoplay: true,
+        // 歌曲栏折叠
+        listFolded:true,
+        // 颜色
+        theme: '#f9bcdd',
+        // 播放顺序为随机
+        order: 'random',
+        loop:'all',
+        // 初始音量
+        volume: 0.1,
+        // 歌词显示
+        lrcType: 3,
+      },
+      mobile :{
+        // 手机端去掉cover图
+        cover: false,
       }
-    ],
+    }]
+  
 
     // [
     //   //悬浮框公告
