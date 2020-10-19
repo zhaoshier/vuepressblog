@@ -43,13 +43,37 @@ module.exports = {
         "icon": "reco-date"
       },
       {
-        "text": "Docs",
+        "text": "Link",
         "icon": "reco-message",
         "items": [               //导航子标题
           {
-            "text": "vuepress-reco",
-            "link": "/docs/theme-reco/"
-          }
+            "text": "VUE教程",
+            "icon": "reco-eye",
+            "items":[
+              {
+                "text": "Vue官方文档",
+                "link": "https://cn.vuejs.org/", 
+              },
+              {
+                "text": "Vuex官方文档",
+                "link": "https://vuex.vuejs.org/zh/", 
+              },
+              {
+                "text": "Vue Router官方文档",
+                "link": "https://router.vuejs.org/zh/", 
+              },
+            ]            
+          },
+          {
+            "text": "React教程",
+            "icon": "reco-eye",
+            "items":[
+              {
+                "text": "react+dva+antd+umi项目建立",
+                "link": "https://www.jianshu.com/p/4456ddbce29d", 
+              },
+            ]            
+          },
         ]
       },
       {
@@ -71,8 +95,9 @@ module.exports = {
         "theme",
         "plugin",
         "api"
-      ]
+      ],
     },
+    subSidebar: 'auto',
     "type": "blog",
     "blogConfig": {
       "category": {
@@ -116,7 +141,20 @@ module.exports = {
         "desc": "A simple and beautiful vuepress Blog & Doc theme.",
         "avatar": "https://www.sunwenyue.top/sweny.jpg",
         "link": "https://lovelijunyi.gitee.io/"
-      }
+      },
+      {
+        "title": "butterFly",
+        "desc": "A simple and beautiful vuepress Blog & Doc theme.",
+        "avatar": "https://www.sunwenyue.top/sweny.jpg",
+        "link": "https://demo.jerryc.me/"
+      },
+      {
+        "title": "Znote",
+        "desc": "A simple and beautiful vuepress Blog & Doc theme.",
+        "avatar": "https://www.sunwenyue.top/sweny.jpg",
+        "link": "https://github.com/zpj80231/znote"
+      },
+
     ],
     //博客自定义logo
     "logo": "/earth.png",
@@ -135,6 +173,7 @@ module.exports = {
     //   color: '#42b983', // 登录页动画球的颜色
     //   lineColor: '#42b983' // 登录页动画线的颜色
     // },
+
     //添加评论功能
     "valineConfig": {
       "appId": "W3OJjBH5wC2jrECo5vSMpl97-gzGzoHsz",
@@ -181,17 +220,17 @@ module.exports = {
           buttonText: "刷新"
         }
       }],
-      // 动态标题
+    // 动态标题
     ["dynamic-title",
-    {
-      showIcon: "vuepress/smile.ico",
-      showText: "(^︶^)赵十二 Blog！",
-      hideIcon: "vuepress/cry.ico",
-      hideText: "(●—●)呜呜，不要走嘛！！",
-      recoverTime: 2000
-    }],
+      {
+        showIcon: "vuepress/smile.ico",
+        showText: "(^︶^)赵十二 Blog！",
+        hideIcon: "vuepress/cry.ico",
+        hideText: "(●—●)呜呜，不要走嘛！！",
+        recoverTime: 2000
+      }],
 
-      // 音乐插件
+    // 音乐插件
     ['meting', {
       //metingApi: "https://meting.sigure.xyz/api/music",
       meting: {
@@ -199,33 +238,45 @@ module.exports = {
         server: "netease",
         // 读取歌单
         type: "playlist",
-        mid: "5172410111",
-      },          
+        mid: "5290504287",
+      },
       // 不配置该项的话不会出现全局播放器
       aplayer: {
-        // 吸底模式
-        fixed: true,
-        mini: true,
-        // 自动播放
-        autoplay: true,
         // 歌曲栏折叠
-        listFolded:true,
+        listFolded: true,
         // 颜色
         theme: '#f9bcdd',
         // 播放顺序为随机
         order: 'random',
-        loop:'all',
+        loop: 'all',
         // 初始音量
         volume: 0.1,
         // 歌词显示
         lrcType: 3,
       },
-      mobile :{
+      mobile: {
         // 手机端去掉cover图
         cover: false,
       }
-    }]
-  
+    }],
+
+    [
+      //先安装在配置， npm install @vuepress-reco/vuepress-plugin-kan-ban-niang --save
+      "@vuepress-reco/vuepress-plugin-kan-ban-niang",
+      {
+        theme: ['blackCat', 'whiteCat', 'haru1', 'haru2', 'haruto', 'koharu', 'izumi', 'shizuku', 'wanko', 'miku', 'z16'],
+        clean: false,
+        messages: {
+          welcome: '我是lookroot欢迎你的关注 ',
+          home: '心里的花，想要带你回家。',
+          theme: '希望你能喜欢我的其他小伙伴哟。',
+          close: '再见哦'
+        },
+        width: 96,
+        height: 141
+      }
+    ],
+
 
     // [
     //   //悬浮框公告

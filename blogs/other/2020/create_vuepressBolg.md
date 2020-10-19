@@ -1,16 +1,17 @@
 ---
 title: 博客的搭建与部署（vuepress, github, vrecel）
 date: 2020-10-15
+subSidebar: true
 tags:
  - other
 categories:
  -  other
 ---
 
-##### 1.搭建项目并在本地运行                                  
+### 1.搭建项目并在本地运行                                  
 基于vuepress搭建一个项目，具体操作见vuepress官网教程。
 
-##### 2.部署上线         
+### 2.部署上线         
 **方式一**：自己买一个服务器，阿里云，腾讯云等，这种方式的好处就是可靠、速度有保障，可以被搜索引擎收录。坏处就是要花钱啊。  
 
 **方式二**：使用github pages。什么是github pages呢？它是github提供的、用于搭建个人网站的静态站点托管服务。这种方式的好处是免费、方便，坏处是速度可能有点慢，不能被国内搜索引擎收录。
@@ -18,14 +19,14 @@ categories:
 下面主要介绍方式二。
 打开github，**新建两个仓库**，一个仓库用来托管项目的打包好后的静态文件，显示网站内容；一个负责日常的开发的修改代码。
 
-##### 新建仓库一：USERNAME.github.io(不用克隆到本地)
-注意：**USERNAME必须是你自己github账号的名称，而不是其他！！！ **   
+#### **新建仓库一：USERNAME.github.io(不用克隆到本地)**
+注意：**USERNAME必须是你自己github账号的名称，而不是其他！！！**   
 例如：我的github账号名称是zhaoshier，那么新建仓库的名称就为zhaoshier.github.io    
 ![github用户名](http://note.youdao.com/yws/public/resource/2a7f5948a1875f91a869a910a9a07230/xmlnote/A78A7C6BFC534EB887E37070940494AC/2554)   
 
 ![仓库一名称](http://note.youdao.com/yws/public/resource/2a7f5948a1875f91a869a910a9a07230/xmlnote/8A5B4E7D948A4E80AAB77BC0458B7BCF/2556)     
 这个仓库建好后不用克隆到本地，内容的修改都在第二个仓库中进行。 
-##### 新建仓库二：随便起一个名字，如vuepressBLog(克隆到本地)
+#### **新建仓库二：随便起一个名字，如vuepressBLog(克隆到本地)**
 这个仓库是用来开发博客的，以后只需修改这个项目就行。    
 通过git pull将仓库二的内容拷贝到本地vueperessBlog文件夹中。    
 然后将新搭建的项目拷贝到本地的vuepressBlog文件中。并在根目录下创建deploy.sh文件，内容如下：
@@ -79,10 +80,10 @@ npm run deploy
 
 ![博客首页](http://note.youdao.com/yws/public/resource/2a7f5948a1875f91a869a910a9a07230/xmlnote/A70FC3FD583E4FB588A47EDA73DF3FBA/2560)
 
-##### 3.将博客发布到自己的个人域名上
+### 3.将博客发布到自己的个人域名上
 若不满足于[https://zhaoshier.github.io](https://zhaoshier.github.io)这样的域名，想要一个专属域名，如[https://zhaoshier.top](https://zhaoshier.top)，可进行如下操作：
 
-##### (1)购买并解析域名
+#### **(1)购买并解析域名**
 我是在腾讯云上买的域名，下面以腾讯云为例：
 购买成功后，进入我的域名页面，点击[解析]
 
@@ -93,7 +94,7 @@ npm run deploy
 ![域名解析](http://note.youdao.com/yws/public/resource/2a7f5948a1875f91a869a910a9a07230/xmlnote/43750456F87D44C780C3CB48D772E3B9/2646)
 
 
-###### 方式一：点击[快速添加网址邮箱解析]按钮，具体如下：   
+#### 方式一：点击[快速添加网址邮箱解析]按钮，具体如下：   
 ![快速解析](http://note.youdao.com/yws/public/resource/2a7f5948a1875f91a869a910a9a07230/xmlnote/656E6B1F020B4745991DD072B8989F5B/2649)
 
 然后再点击“网站解析”右侧的[立即设置]按钮。  
@@ -104,10 +105,10 @@ npm run deploy
 
 就会自动添加@和www两条消息记录，说明已成功将该域名解析到相应的主机空间中。   
 
-###### 方式二：直接点击[添加记录]按钮，然后填写相应信息点击[保存]按钮即可。    
+#### 方式二：直接点击[添加记录]按钮，然后填写相应信息点击[保存]按钮即可。    
 ![方式二解析](http://note.youdao.com/yws/public/resource/2a7f5948a1875f91a869a910a9a07230/xmlnote/556C8C69A5E8442D92F33387146818F1/2651) 
 
-##### (2)注册vercel，并与github绑定
+#### **(2)注册vercel，并与github绑定**
 首先，注册vercel账号，并关联你自己的github账号
 
 然后，在vercel中引入你的远程仓库一，让两个关联起来。
@@ -129,12 +130,11 @@ npm run deploy
 
 现在，你在本地的vuepressBlog文件夹下修改的内容，当你把内容push到仓库二上时，在这边会自动更新你所修改的内容。
 
-##### (3)绑定域名
+#### **(3)绑定域名**
 
-在vercel的控制面板里打开你的项目(此处我的是zzzzzsssseee) => Settings => Domains    
+在vercel的控制面板里打开你的项目(此处我的是zzzzzsssseee) => Settings => Domains              
+![vercel](https://gitee.com/zhaoshier/blogimage/raw/master/images/[vuepressBlog]-2.png)
 
-![Domains](http://note.youdao.com/yws/public/resource/2a7f5948a1875f91a869a910a9a07230/xmlnote/A8CF53AD9BAF45F1AA619B695B497954/2682)
+在输入框中输入你在第二部所解析的域名(此处我的是zhaoshier.top),点击添加，就可成功绑定了。   
 
-在输入框中输入你在第二部所解析的域名(此处我的是zhaoshier.top),点击添加，就可成功绑定了。  
-
-![example](http://note.youdao.com/yws/public/resource/2a7f5948a1875f91a869a910a9a07230/xmlnote/823ABF9AD32C4FDFADA4746913B3ED42/2693)
+![last](https://gitee.com/zhaoshier/blogimage/raw/master/images/[vuepressBlog]-1.png)
