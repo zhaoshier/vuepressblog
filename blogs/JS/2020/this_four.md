@@ -72,7 +72,7 @@ per.fn()
 ```
 example 3中，this的指向的是对象per，因为是per调用的fn，即per.fn()。在这里再强调一次，this的指向是在函数调用的时候确定的！！
 
-实际上，example1 和example 3的说的并不是很准确严谨，当函数被嵌套调用的时候，this到底指向哪个哪呢？来看下面几个例子：
+实际上，example1 和example 3说的并不是很准确严谨，当函数被嵌套调用的时候，this到底指向哪个哪呢？来看下面几个例子：
 ```js
 example 4：
 
@@ -122,7 +122,7 @@ obj.b.fn();
 ```
 example 6中，尽管对象b中没有属性a，this的指向也是它的上一级对象b，不管这个对象中有没有this要的东西。   
 
-再看一个会让人迷惑的例子:
+再看一个让人迷惑的例子:
 ```js
 example 7:
 var obj = {
@@ -140,7 +140,7 @@ j()
 ```
 example 7中this的指向为window。看完example 5和example 7是不是有些凌乱了。    
 这里要注意一句话：**this永远指向的是最后调用它的对象，也就是看它执行的时候是谁调用的。**    
-example 7中虽然函数fn是被对象b所引用，但是在将fn赋值给变量j的时候并没有执行所以最终指向的是window，这和example 5是不一样的，example 5是直接执行了fn。
+example 7中虽然函数fn是被对象b所引用，但是在将fn赋值给变量 j 的时候并没有执行。所以最终指向的是window，这和example 5是不一样的，example 5是直接执行了fn。
 
 
 
@@ -159,7 +159,7 @@ function Per(){
     var user = "zhaoshier"
 }
 var student = new Per();
-console.log(student.user) //zhaoshier
+console.log(student.user) //undefined
 ```
 new关键字可以改变this的指向，new在创建一个对象实例时，相当于复制了一份Per到对象student中，所以this也就指向了student。
 
@@ -383,7 +383,7 @@ var a = new fn;
 console.log(a.user) //zhaoshier
 ```
 
-在构造函数里return null, 虽然null也是一个对象，但this还是指向哪个函数的实例。
+在构造函数里return null, 虽然null也是一个对象，但this还是指向那个函数的实例。
 ```js
 example 24:
 

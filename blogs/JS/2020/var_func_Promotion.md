@@ -5,8 +5,6 @@ tags:
  - Javascript
 categories:
  -  Javscript
-keys:
- - 'e10adc3949ba59abbe56e057f20f883e'
 ---
 先思考下面两段代码分别输出什么？
 ```js
@@ -29,7 +27,7 @@ func2();
 <!--example 1的输出结果为1，example 2的输出结果为函数a()-->
 ```
 为什么两个example的输出结果是这样呢？这就涉及到JS中的变量提升和函数提升的不同之处了。  
-##### 1.变量提升
+### 1.变量提升
 ```js
 example 3:
 
@@ -70,12 +68,12 @@ func4();
 ```
 由example 3和example 4知：变量的提升，提升的其实是变量的声明，而不是变量的赋值
 
-##### 2.函数的提升
+### 2.函数的提升
 
-函数的提升和变量的提升类似，都是提升到作用域的最开始的位置，只不过变量的提升分两步：第一步是变量声明的提升；第二步是变量的赋值。而**函数的提升是直接将整个函数提升到作用域的最开始位置，相当于直接剪切过去一样**。
+函数的提升和变量的提升类似，都是提升到作用域的最开始的位置，只不过变量的提升分两步：第一步是变量声明的提升；第二步是变量的赋值。而<font color=#3eaf7c>**函数的提升是直接将整个函数提升到作用域的最开始位置，相当于直接剪切过去一样**。</font>
 
-##### 3.变量提升和函数提升的顺序
-在作用域中，不管是变量还是函数，都会提升到作用域最开始的位置，不同的是，**函数的提升后的位置是在变量提升后的位置之后的。**
+### 3.变量提升和函数提升的顺序
+在作用域中，不管是变量还是函数，都会提升到作用域最开始的位置，不同的是：<font color=#3eaf7c>**函数的提升后的位置是在变量提升后的位置之后的。**</font>
 ```js
 example 5:
 function func5(){
@@ -159,7 +157,7 @@ function func7(){
 func7();
 ```
 
-**注意：** 只有声明的变量和函数才会提升，隐式全局变量不会提升！！  
+**注意：只有声明的变量和函数才会提升，隐式全局变量不会提升！！** 
 
 example 8 中，b不会进行变量提升
 ```js
@@ -175,8 +173,8 @@ function func8() {
 func8();
 ```
 
-
-**--------2020.10.10补充---------**    
+---
+**<font color=#3eaf7c>-----2020.10.10补充-----</font>**    
 当在函数体内部调用自身时，对应的函数提升与变量提升如example 9：
 ```js
 example 9:
@@ -225,11 +223,12 @@ function f(){
 ```
 example 10解析过程：
 ```js
+var fn;
 //函数声明
 function f(){
     console.log(0)
 }
-var fn;
+
 f(); //0
 fn(); //fn is not a function 
 
@@ -358,7 +357,7 @@ function fun3(){
     console.log(typeof fun1);// function
     console.log(typeof fun2);//undefined
     fun1();//11
-    fun2();//fun2 is not a function
+    fun2();//Uncaught TypeError: fun2 is not a function
     function fun1(){console.log("11")}//函数声明
     var fun2=function(){console.log("22")}//函数表达式
 

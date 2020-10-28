@@ -1,6 +1,13 @@
 ---
 title: vuepress-theme-reco
-date: 2019-04-09
+date: 2020-10-22
+subSidebar: true
+tags:
+ - other
+categories:
+ -  other
+keys:
+ - 'e10adc3949ba59abbe56e057f20f883e'
 ---
 
 ![vuepress](https://img.shields.io/badge/vuepress-0.14.8-brightgreen.svg)

@@ -1,5 +1,5 @@
 ---
-title: 博客的搭建与部署（vuepress, github, vrecel）
+title: 博客的搭建与部署（vuepress, github, vercel）
 date: 2020-10-15
 subSidebar: true
 tags:

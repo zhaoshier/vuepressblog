@@ -134,4 +134,7 @@ person = {
      name : 'zhaojj',
      sex : '女'
  }
+
+//  VM2252:5 Uncaught TypeError: Assignment to constant variable.
+//     at <anonymous>:5:8
 ```

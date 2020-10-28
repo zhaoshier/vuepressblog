@@ -154,7 +154,6 @@ example 6清楚地说明了，箭头函数里根本没有自己的this，二是�
 ```js
 example 7:
 
-
 (function() {
   return [
     (() => this.x).bind({ x: 'inner' })()
