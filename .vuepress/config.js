@@ -67,6 +67,14 @@ module.exports = {
                                 "text": "Electron",
                                 "link": "https://www.electronjs.org/"
                             },
+                            {
+                                "text": "axios",
+                                "link": "https://www.kancloud.cn/yunye/axios/234845"
+                            },
+                            {
+                                "text": "qs",
+                                "link": "https://storm4542.github.io/archives/7b89c88d.html"
+                            },
                         ]
                     },
                     {

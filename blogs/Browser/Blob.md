@@ -9,8 +9,7 @@ categories:
 
 ### **1.Blob是什么？** 
 Blob（Binary Large Object）表示二进制类型的大对象。在数据库管理系统中，将二进制数据存储为一个单一个体的集合。Blob 通常是影像、声音或多媒体文件。在 JavaScript 中 Blob 类型的对象表示不可变的类似文件对象的原始数据。 
-
-####  <font color=#3eaf7c> 1.1.创建一个Blob只有两种方式：</font>  
+####  <font color=#3eaf7c> 1.1 创建一个Blob只有两种方式：</font>  
  
 **(1)通过new Blob()** 
 
@@ -27,7 +26,7 @@ var aBlob = new Blob(['content'], { type:'text/plain' });
 ```   
 **(2)使用Blob.slice切割，创建一个新的Blob对象。**   
 
-####  <font color=#3eaf7c> 1.2.读取Blob的唯一方式，使用fileReader</font>
+####  <font color=#3eaf7c> 1.2 读取Blob的唯一方式，使用fileReader</font>
 
 ```js
 var reader = new FileReader();
@@ -54,7 +53,7 @@ Blob 由一个可选的字符串 type（通常是 MIME 类型）和 blobParts �
 
 > MIME（Multipurpose Internet Mail Extensions）多用途互联网邮件扩展类型，是设定某种扩展名的文件用一种应用程序来打开的方式类型，当该扩展名文件被访问的时候，浏览器会自动使用指定应用程序来打开。多用于指定一些客户端自定义的文件名，以及一些媒体文件打开方式。 常见的 MIME 类型有：超文本标记语言文本（.html、text/html）、PNG图像（.png、image/png）、普通文本 （.txt、text/plain） 等。
 
-####  <font color=#3eaf7c>2.1构造函数 </font>  
+####  <font color=#3eaf7c>2.1 构造函数 </font>  
 ```js
 var aBlob = new Blob(blobParts, options);
 ```
@@ -71,10 +70,10 @@ console.log(myBlob.size + " bytes size");
 console.log(myBlob.type + " is the type");
 // Output: text/html is the type
 ```
-####  <font color=#3eaf7c>2.2属性</font>
+####  <font color=#3eaf7c>2.2 属性</font>
 前面已经介绍过两个属性：size和type
 
-#### <font color=#3eaf7c>2.3方法</font>
+#### <font color=#3eaf7c>2.3 方法</font>
 ![](https://gitee.com/zhaoshier/blogimage/raw/master/images/20201021Blob3.png)   
 - slice([start[, end[, contentType]]])：返回一个新的 Blob 对象，包含了源 Blob 对象中指定范围内的数据。
 - stream()：返回一个能读取 Blob 内容的 ReadableStream。
@@ -83,7 +82,7 @@ console.log(myBlob.type + " is the type");
 
 
 ### 3.Blob使用场景
-#### <font color=#3eaf7c>3.1分片上传</font>  
+#### <font color=#3eaf7c>3.1 分片上传</font>  
 File 对象是特殊类型的 Blob，且可以用在任意的 Blob 类型的上下文中。所以针对大文件传输的场景，我们可以使用 slice 方法对大文件进行切割，然后分片进行上传，具体示例如下：
 ```js
 const file = new File(["a".repeat(1000000)], "test.txt");
@@ -103,7 +102,7 @@ async function chunkedUpload() {
   }
 }
 ```
-#### <font color=#3eaf7c>3.2从互联网上下载数据</font>      
+#### <font color=#3eaf7c>3.2 从互联网上下载数据</font>      
 我们可以使用以下方法从互联网上下载数据并将数据存储到 Blob 对象中，比如
 ```js
 const downloadBlob = (url, callback) => {
@@ -136,7 +135,7 @@ fetch(myRequest)
 
 Blob 可以很容易的作为```<a><img>``` 或其他标签的 URL，多亏了 type 属性，我们也可以上传/下载 Blob 对象。下面我们将举一个 Blob 文件下载的示例，不过在看具体示例前我们得简单介绍一下 Blob URL。   
 
-#### 1.Blob URL/Object URL
+#### （1） Blob URL/Object URL
 Blob URL/Object URL 是一种伪协议，允许 Blob 和 File 对象用作图像，下载二进制数据链接等的 URL 源。在浏览器中，我们使用 URL.createObjectURL 方法来创建 Blob URL，该方法接收一个 Blob 对象，并为其创建一个唯一的 URL，其形式为 blob:```<origin>/<uuid>```，对应的示例如下：
 ```
 blob:https://example.org/40a5fb5a-d56d-4a33-b4e2-0acf6a8e5f641
@@ -149,7 +148,7 @@ blob:https://example.org/40a5fb5a-d56d-4a33-b4e2-0acf6a8e5f641
 
 针对这个问题，我们可以调用 URL.revokeObjectURL(url) 方法，从内部映射中删除引用，从而允许删除 Blob（如果没有其他引用），并释放内存。接下来，我们来看一下 Blob 文件下载的具体示例
 
-#### 2.Blob 文件下载示例
+#### （2）Blob 文件下载示例
 index.html
 ```html
 <!DOCTYPE html>
