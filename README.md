@@ -1,7 +1,7 @@
 ---
 home: true
 heroText: zhaoshier Blog
-tagline: 努力奋进的赵十二
+tagline: 努力奋进の赵十二
 heroTextStyle: {
   color: 'white',
 }
@@ -17,7 +17,8 @@ heroTextStyle: {
 # }
 bgImage: /1.gif
 bgImageStyle: {
-  height: 500px'
+  height: 500px,
+  background-attachment: 'fixed'
 }
 isShowTitleInHome: false
 actionText: Guide
