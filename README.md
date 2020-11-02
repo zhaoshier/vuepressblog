@@ -17,8 +17,8 @@ heroTextStyle: {
 # }
 bgImage: /1.gif
 bgImageStyle: {
-  height: 500px,
-  background-attachment: 'fixed'
+  # height: 500px,
+  # background-attachment: 'fixed'
 }
 isShowTitleInHome: false
 actionText: Guide

@@ -147,6 +147,12 @@ module.exports = {
                 "link": "https://swenyy.github.io/"
             },
             {
+                "title": "zhanghualin",
+                "desc": "A simple and beautiful vuepress Blog & Doc theme.",
+                // "avatar": "https://www.sunwenyue.top/sweny.jpg",
+                "link": "http://zhanghualin.com/"
+            },
+            {
                 "title": "小弋的生活馆",
                 "desc": "A simple and beautiful vuepress Blog & Doc theme.",
                 "avatar": "https://www.sunwenyue.top/sweny.jpg",
@@ -171,10 +177,10 @@ module.exports = {
                 "link": "https://springlych.github.io"
             },
             {
-                "title": "zhanghualin",
-                "desc": "A simple and beautiful vuepress Blog & Doc theme.",
+                "title": "ChokCoco",
+                "desc": "经不住流年似水，逃不过此间少年",
                 // "avatar": "https://www.sunwenyue.top/sweny.jpg",
-                "link": "http://zhanghualin.com/"
+                "link": "https://www.cnblogs.com/coco1s/p/4375774.html"
             },
 
         ],
