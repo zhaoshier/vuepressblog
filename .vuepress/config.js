@@ -7,7 +7,7 @@ module.exports = {
             "link",
             {
                 "rel": "icon",
-                "href": "/sun.jpg"
+                "href": "/earth.png"
             }
         ], //博客图标设置
         [
@@ -213,6 +213,7 @@ module.exports = {
         "lineNumbers": true
     },
     "plugins": [
+        ["vuepress-plugin-boxx"],
         // [
         //   //鼠标点击特效 先安装在配置， npm install vuepress-plugin-cursor-effects --save
         //   "cursor-effects",
