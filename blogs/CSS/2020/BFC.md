@@ -12,8 +12,8 @@ categories:
 :::tip   
 BFC(Block formatting context)--"块级格式化上下文"。它是一个独立的渲染区域，只有Block-level box参与， 它规定了内部的Block-level Box如何布局，并且与这个区域外部毫不相干。    
 :::   
-从定义看出来，这个东西是对上下文起作用的。可上下文是指哪里？
-MDN官方定义的：一个块格式化上下文（block formatting context） 是Web页面的可视化CSS渲染出的一部分。它是块级盒布局出现的区域，也是浮动层元素进行交互的区域。 
+从定义看出来，这个东西是对上下文起作用的。可上下文是指哪里？         
+MDN官方定义：一个块格式化上下文（block formatting context） 是Web页面的可视化CSS渲染出的一部分。它是块级盒布局出现的区域，也是浮动层元素进行交互的区域。 
 ### 2.BFC布局规则   
 1. 内部的Box会在垂直方向，一个接一个地放置。
 1. Box垂直方向的距离由margin决定。属于同一个BFC的两个相邻Box的margin会发生重叠。
