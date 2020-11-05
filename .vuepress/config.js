@@ -85,6 +85,28 @@ module.exports = {
                             "link": "https://www.jianshu.com/p/4456ddbce29d",
                         }, ]
                     },
+                    {
+                        "text": "JS教程",
+                        "icon": "reco-eye",
+                        "items": [{
+                            "text": "现代JavaScript教程",
+                            "link": "https://zh.javascript.info/",
+                        }, ]
+                    },
+                    {
+                        "text": "优秀总结",
+                        "icon": "reco-eye",
+                        "items": [{
+                                "text": "师傅的ProcessOn",
+                                "link": "https://www.processon.com/view/link/5f39dfa7e0b34d0711735d59",
+                            },
+                            {
+                                "text": "学习路线-掘金jsliang",
+                                "link": "https://juejin.im/post/6890075489881948167",
+                            },
+
+                        ]
+                    },
                 ]
             },
             {
@@ -172,7 +194,7 @@ module.exports = {
             },
             {
                 "title": "Spring 李",
-                "desc": "A simple and beautiful vuepress Blog & Doc theme.",
+                "desc": "java相关",
                 "avatar": "https://www.sunwenyue.top/sweny.jpg",
                 "link": "https://springlych.github.io"
             },
@@ -181,6 +203,12 @@ module.exports = {
                 "desc": "经不住流年似水，逃不过此间少年",
                 // "avatar": "https://www.sunwenyue.top/sweny.jpg",
                 "link": "https://www.cnblogs.com/coco1s/p/4375774.html"
+            },
+            {
+                "title": "qingfeng Blog",
+                "desc": "github大神",
+                // "avatar": "https://www.sunwenyue.top/sweny.jpg",
+                "link": "https://github.com/mqyqingfeng/Blog/issues"
             },
 
         ],

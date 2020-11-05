@@ -18,7 +18,7 @@ origin | padding-box,border-box,content-box | 规定 background-position 属性�
 clip | padding-box,border-box,content-box | 背景的绘制区域 | 3
 attachment | scroll,fixed,inherit | 背景图像是否固定或者随着页面的其余部分滚动 | 1 
 image | url('URL'),none,inherit | 要使用的背景图像 | 1
-inherit | -- | 应该从父元素继承 background 属性的设置像 | 1
+inherit | -- | 从父元素继承 background 属性 | 1
 
 background简写属性：
 ```css
@@ -89,7 +89,6 @@ background-size: cover;
 background-size: contain;
 ```
 **背景图片铺满全屏：**   
-四种方法比较
 ```css
 background-size: cover;
 background-size: contain;

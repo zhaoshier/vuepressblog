@@ -11,7 +11,7 @@ categories:
 清除浮动的4种方法：
 1. 额外标签法 :x:
 2. 父级添加overflow属性 :x:
-3. 使用after为元素清除浮动 :heavy_check_mark:
+3. 使用after伪元素清除浮动 :heavy_check_mark:
 4. 使用before和after双伪元素清除浮动 :heavy_check_mark:
 :::
 **为什么要清除浮动？**  
@@ -20,9 +20,9 @@ categories:
 给父盒子设置一个boder，内部放两个盒子1和2 ，未给1和2设置浮动，它们会默认撑开父盒子，如下图:
 ![](https://gitee.com/zhaoshier/blogimage/raw/master/images/20201103BFC-1-6.png)
 
-当给内部的1和2盒子加上float属性时   
-![](https://gitee.com/zhaoshier/blogimage/raw/master/images/20201103BFC-1-7.png)
-由图可知：3盒子会跑到最上面；父盒子因没有宽度变成一条线；1和2盒子已经浮动了。
+当给内部的1和2盒子加上float属性时， 3盒子会跑到最上面；父盒子因没有宽度变成一条线；1和2盒子已经浮动了。  
+![](https://gitee.com/zhaoshier/blogimage/raw/master/images/20201103BFC-1-7.png)     
+
 ### 1.额外标签法
 **（在最后一个浮动标签后，新加一个标签，给其设置clear：both；）（不推荐）**
 ```html
@@ -85,7 +85,7 @@ categories:
 
 </html>
 ```
-效果如图所示：    
+效果如图：    
 ![](https://gitee.com/zhaoshier/blogimage/raw/master/images/20201103BFC-1-8.png)
 
  如果我们清除了浮动，父元素自动检测子盒子最高的高度，然后与其同高。  
@@ -111,14 +111,15 @@ categories:
         overflow: hidden;
 }
 ```
-效果图：
+效果图：    
 ![](https://gitee.com/zhaoshier/blogimage/raw/master/images/20201103BFC-1-9.png)
 
 :::tip
 优点：代码简洁
 
-缺点：内容增多的时候容易造成不会自动换行导致内容被隐藏掉，无法显示要溢出的元素。    
-:::   
+缺点：内容增多的时候容易造成不会自动换行导致内容被隐藏掉，无法显示要溢出的元素。 如下图。   
+:::      
+![](https://gitee.com/zhaoshier/blogimage/raw/master/images/20201105clearFloat-2.png)
 
 ### 3.使用after伪元素清除浮动（推荐使用）
 ```html
@@ -154,7 +155,7 @@ categories:
 :::    
 ### 4.使用before和after双伪元素清除浮动
 ```html
-.clearfix:after, .clear:before {
+.clearfix:after, .clearfix:before {
         content: "";
         display: table;
 }
@@ -186,7 +187,3 @@ categories:
 缺点：用zoom:1触发hasLayout.   
 :::      
 
-**总结：**   
-通过上面例子，发现清除浮动的方法可以分为两大类：    
-一是触发浮动元素父元素的BFC；    
-二是利用clear属性。

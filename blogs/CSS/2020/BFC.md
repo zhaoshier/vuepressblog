@@ -13,16 +13,16 @@ categories:
 BFC(Block formatting context)--"块级格式化上下文"。它是一个独立的渲染区域，只有Block-level box参与， 它规定了内部的Block-level Box如何布局，并且与这个区域外部毫不相干。    
 :::   
 从定义看出来，这个东西是对上下文起作用的。可上下文是指哪里？         
-MDN官方定义：一个块格式化上下文（block formatting context） 是Web页面的可视化CSS渲染出的一部分。它是块级盒布局出现的区域，也是浮动层元素进行交互的区域。 
+**MDN官方定义**：一个块格式化上下文（block formatting context） 是Web页面的可视化CSS渲染出的一部分。它是块级盒布局出现的区域，也是浮动层元素进行交互的区域。 
 ### 2.BFC布局规则   
 1. 内部的Box会在垂直方向，一个接一个地放置。
 1. Box垂直方向的距离由margin决定。属于同一个BFC的两个相邻Box的margin会发生重叠。
-1. 每个盒子（块盒与行盒）的margin box的左边，与包含块border box的左边相接触(对于从左往右的格式化，否则相反)。即使存在浮动也是如此。
+1. 每个盒子（块盒与行盒）的margin box的左边，与包含块border box的左边相接触(对于从左往右的格式，否则相反)。即使存在浮动也是如此。
 1. BFC的区域不会与float box重叠。
 1. BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此。
 1. 计算BFC的高度时，浮动元素也参与计算。
 ### 3.如何创建BFC
-:::tip   
+:::danger   
 一个块格式化上下文由下列之一创建：   
 1. 根元素或其它包含它的元素
 2. 浮动元素 (元素的 float 不是 none)
@@ -42,7 +42,6 @@ MDN官方定义：一个块格式化上下文（block formatting context） 是W
 - 清除浮动
 - 利用BFC避免margin重叠
 - 自适应两栏布局
-
 
 #### 4.1 清除浮动
 当我们不给父节点设置高度，子节点设置浮动的时候，会发生高度塌陷，此时就需要清除浮动。
@@ -70,8 +69,7 @@ MDN官方定义：一个块格式化上下文（block formatting context） 是W
 
 如果给子元素一个float或者绝对定位，父元素发生高度塌陷，如图2所示。
 
-<font color=#3eaf7c>根据计算BFC的高度是，浮动元素也参与计算。</font>可让**父元素产生一个BFC，将盒子撑起来。**
-
+<font color=#3eaf7c>根据计算BFC的高度时，浮动元素也参与计算。</font>可让**父元素产生一个BFC，将盒子撑起来。**
 #### 4.2 利用BFC避免margin重叠
 ```html
 <html>
@@ -148,10 +146,10 @@ MDN官方定义：一个块格式化上下文（block formatting context） 是W
 
 </html>
 ```
-![](https://gitee.com/zhaoshier/blogimage/raw/master/images/20201103BFC-1-4.png)
 
+![](https://gitee.com/zhaoshier/blogimage/raw/master/images/20201103BFC-1-4.png)
 #### 4.3 自适应两栏布局
-每个盒子的margin box的左边，与包含块border box的左边相接触(对于从左往右的格式化，否则相反)。即使存在浮动也是如此。
+每个盒子的margin box的左边，与包含块border box的左边相接触(对于从左往右的格式，否则相反)。即使存在浮动也是如此。
 ```html
 <style type="text/css">
     * {
