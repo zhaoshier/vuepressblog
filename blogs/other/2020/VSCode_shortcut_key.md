@@ -55,7 +55,7 @@ VS Code常用快捷键总结
 
 关闭当前的VS Code编辑器:   Ctrl+Shift+W
 
-切出一个新的编辑器窗口（最多3个):   Ctrl+\
+切出一个新的编辑器窗口:   Ctrl+\
 
 切换左中右3个编辑器窗口的快捷键:   Ctrl+1  Ctrl+2  Ctrl+3
 ```
