@@ -35,8 +35,18 @@ function formatDate(date) {
 var myDate=new Date()
 formatDate(myDate) //2021-02-18 15:33:40
 ```
+### 3.普通格式日期转化成GMT
+```JS
+function strToGMT(time){
+    let GMT = new Date(time)
+    console.log(GMT)
+    return GMT
+}
+var time ="2021-02-18 15:33:40";
+strToGMT(time) //Thu Feb 18 2021 15:33:40 GMT+0800 (中国标准时间)
+```
 
-### 3.计算两个日期间相差的天数/小时/分/秒
+### 4.计算两个日期间相差的天数/小时/分/秒
 ```JS
 function dateDiff(firstDate,secondDate){
     var firstDate = new Date(firstDate);
@@ -55,7 +65,7 @@ function dateDiff(firstDate,secondDate){
     dateDiff(date1,date2)
 ```
 
-### 4.显示yy-mm-dd 星期w
+### 5.显示yy-mm-dd 星期w
 ```JS
  function showWeek(showWeek)  
 {   
@@ -72,7 +82,7 @@ function dateDiff(firstDate,secondDate){
 showWeek(true) 
 ```
 
-### 5.获取某年每个月天数&&某月天数
+### 6.获取某年每个月天数&&某月天数
 ```JS
 // 获取某年每个月的天数
 function getDaysInYear() {
@@ -101,7 +111,7 @@ function getDaysInMonth(nowyear, nowmonth) {
 getDaysInMonth(2021, 02)
 ```
 
-### 6.获取当前周是一年之中的第几周
+### 7.获取当前周是一年之中的第几周
 ```JS
 function theWeek() {
     var totalDays = 0;
