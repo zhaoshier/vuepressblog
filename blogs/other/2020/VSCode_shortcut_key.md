@@ -77,6 +77,13 @@ VS Code常用快捷键总结
 在当前行下方插入一行:   Ctrl+Enter
 
 在当前行上方插入一行:   Ctrl+Shift+Enter
+
+代码折叠： Ctrl+Shift+[
+
+代码展开： Ctrl+Shift+]
+
+删除上一个词: Ctrl+backspace
+
 ```
 　　**(2) 光标相关**
 
@@ -111,7 +118,13 @@ VS Code常用快捷键总结
 
 撤销上一步操作: Ctrl+Z
 
+回退上一步撤销操作: Ctrl+Y
+
 手动保存:   Ctrl+S
+
+跳转到对应行: Ctrl+g 然后输入要跳转的行号
+
+删除行: Ctrl+x
 ```
  　　**(3) 重构代码**
 

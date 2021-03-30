@@ -9,8 +9,7 @@ categories:
 
 ### 1.文件引入    
 ```html
-eg1：
-
+eg 1：
 <style lang="scss" scoped>
 @import '../../styles/readBid.scss';
 </style>
@@ -18,8 +17,7 @@ eg1：
 ### 2.变量
 通过$符号声明变量，使用“-中划线”，变量默认值使用!default
 ```scss
-eg2：
-
+eg 2：
 $warnning-color: red;
 $warnning-border: 1px solid $warning-color;    
 //$warning-color的值将会替换所有引用他们的位置
@@ -30,8 +28,7 @@ $set-width: 400px !default;
 ### 3.嵌套
 #### 3.1 父选择器 &
 ```scss
-eg3： 
-
+eg 3： 
 .content {
   a {
     &:hover { margin-bottom: 1.4em }
@@ -42,8 +39,7 @@ eg3：
 ```
 #### 3.2 组合嵌套
 ```scss
-eg4：
-
+eg 4：
 .container {
   h1, h2, h3 {margin-bottom: .8em}
 }
@@ -52,8 +48,7 @@ eg4：
 ```
 
 ```scss
-eg5：
-
+eg 5：
 nav, aside {
   a {color: blue}
 }
@@ -62,8 +57,7 @@ nav a, aside a {color: blue}
 ```
 #### 3.3 结合css+ > ~选择器
 ```scss
-eg6：
-
+eg 6：
 article {
   ~ article { border-top: 1px dashed #ccc }
   > section { background: #eee }
@@ -82,8 +76,7 @@ nav + article { margin-top: 0 }
 ```
 #### 3.4 属性嵌套
 ```scss
-eg7：
-
+eg 7：
 nav {
   border: 1px solid #ccc {
   left: 0px;
@@ -103,8 +96,7 @@ nav {
 
 @mixin定义的函数通过@include来引入
 ```scss
-eg8：
-
+eg 8：
 @mixin border-radius($radius) {
           border-radius: $radius;
       -ms-border-radius: $radius;
@@ -120,8 +112,7 @@ eg8：
 
 上面代码编译效果如下：
 ```scss
-eg9：
-
+eg 9：
 .box {
   border-radius: 10px;
   -ms-border-radius: 10px;
@@ -130,8 +121,7 @@ eg9：
 ```
 下面再举一个通过mixin实现样式复用的例子：
 ```scss
-eg10：
-
+eg 10：
 @mixin no-bullets {
   list-style: none;
   li {
@@ -149,8 +139,7 @@ ul.plain {
 ```
 上例编译后代码：
 ```scss
-eg11：
-
+eg 11：
 ul.plain {
   color: #444;
   list-style: none;
@@ -165,8 +154,7 @@ ul.plain li {
 
 继承可通过@extend指令在选择器之间复用css属性
 ```scss
-eg12：
-
+eg 12：
 // 这段代码不会被输出到最终生成的CSS文件，因为它没有被任何代码所继承。
 %other-styles {
   display: flex;
@@ -201,8 +189,7 @@ eg12：
 ```
 上面代码编译成下面代码
 ```scss
-eg13：
-
+eg 13：
 .message, .success, .error, .warning {
   border: 1px solid #ccc;
   padding: 10px;
@@ -226,8 +213,7 @@ eg13：
 ### 6.控制命令
 #### 6.1 @if
 ```scss
-eg14：
-
+eg 14：
 @mixin txt($weight) {
     color: white;
     @if $weight == bold { font-weight: bold;}
@@ -267,8 +253,7 @@ eg14：
 
 #### 6.2 @for
 ```scss
-eg15：
-
+eg 15：
 @for $i from 1 through 4 {
     .col-#{$i} { width: 100/4 * $i + %;}
 }
@@ -276,8 +261,7 @@ eg15：
 
 #### 6.3 @each
 ```scss
-eg16：
-
+eg 16：
 @each $usr in bob, john, bill, mike {
     .#{$usr}-avatar {
         background-image: url('/img/#{$usr}.png');
@@ -287,8 +271,7 @@ eg16：
 
 #### 6.4 @while
 ```scss
-eg17：
-
+eg 17：
 $x:1;
 
 @while $x < 13 {
@@ -302,8 +285,7 @@ $x:1;
 - 逻辑操作符是 and or not
 
 ```scss
-eg18：
-
+eg 18：
 $list-map: (success: lightgreen, alert: tomato, info: lightblue);
 
 @mixin button-state($btn-state) {
@@ -319,8 +301,10 @@ $list-map: (success: lightgreen, alert: tomato, info: lightblue);
 ### 8.颜色运算
 **(使用rgba hsl请保证透明通道一致)**
 ```scss
-eg19：
-
+eg 19：
 color: rgba(70, 132, 153, 1) + rgba(32, 68, 121, 1);
 color: #468499 + #204479;
 ```
+
+[参考1](https://www.jianshu.com/p/cf20281eac4e)   
+[参考2](https://www.jianshu.com/p/a99764ff3c41)

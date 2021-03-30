@@ -7,7 +7,7 @@ categories:
  - Vue
 ---
 
-### 1.安装node.js，全局话安装npm，并配置淘宝镜像
+### 1.安装node.js，全局安装npm，并配置淘宝镜像
 
 ### 2.命令行安装全局vue-cli
 ```
