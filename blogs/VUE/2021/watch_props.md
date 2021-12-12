@@ -1,0 +1,46 @@
+---
+title: vue中获取不到props的值的问题
+date: 2021-04-27
+tags:
+ - Vue
+categories: 
+ - Vue
+---
+
+
+在vue中，经常会用到“父子组件通信”，但在子组件中，在created和mounted的生命周期中获取不到props中的某个属性的值
+
+一般来说，在created声明周期中，数据已完全初始化加载完成。但由父组件传入子组件的值可能是异步请求传值，即在子组件创建完成后，父组件的值才传进来。因此才会有在created、mounted中获取不到props值。
+
+**解决方法：**
+> 1.使用watch监听props的某个属性值，在数据发生变化后才进行某些操作。   
+> 2.在子组件上使用v-if条件判断，在接收到子组件传过来的值后才渲染子组件。（一般不推荐使用）
+
+使用示例
+```js
+props:{
+    currentBidSectionId:{
+        type:String,
+        default:""
+    },
+    currentObject:{
+        type:Object,
+        default:()=> {}
+    }
+},
+watch{
+    currentBidStageId(){
+        this.listLoading = true
+        this.getBidOpenList()
+    },
+    currentObject:{
+        handler(newValue,oldValue) {
+            console.log(newValue,oldValue)
+        },
+        immediate:true,
+        deep:true
+    }
+},
+```
+
+子组件中，在props定义父组件传过来的currentBidSectionId变量，在watch中监听这个变量，如有变化，就进行一些操作
